@@ -35,17 +35,17 @@ hs.hotkey.bind({"alt", "ctrl"}, "0", function()
     local laptopScreen = "Built-in Retina Display"
     local centerScreen = "LEN P27h-10 (2)"
     local rightScreen = "LEN P27h-10 (1)" 
-    local apps = {"Spotify", "Franz", "Google Chrome", "Obsidian"}
+    local apps = {"Spotify", "Slack", "Firefox", "Obsidian"}
     --for a=1, 4 do
     for k,v in pairs(apps) do
         hs.application.open(v)
     end
     local windowLayout = {
         {"Spotify",  nil, laptopScreen, {0, 0.35, 0.5, 0.5}, nil, nil},
-        {"Franz",  nil,   laptopScreen, hs.layout.right70, nil, nil},
-        {"Google Chrome", nil, centerScreen, hs.layout.left50, nil, nil},
+        {"Slack",  nil,   laptopScreen, hs.layout.right70, nil, nil},
+        {"Firefox", nil, centerScreen, hs.layout.left50, nil, nil},
         --{"Code", nil, centerScreen, hs.layout.right50, nil, nil},
-        --{"iTerm2", nil, rightScreen, hs.layout.left30, nil, nil},
+        {"iTerm2", nil, rightScreen, hs.layout.left30, nil, nil},
         {"Obsidian", nil, rightScreen, {0.25, 0.25, 0.5, 0.5}, nil, nil}
     }
     hs.layout.apply(windowLayout)
