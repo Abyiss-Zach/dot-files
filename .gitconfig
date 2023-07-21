@@ -1,0 +1,36 @@
+[core]
+	editor = vim
+	excludesfile = /Users/zachrobert/.gitignore
+	autocrlf = input
+	safecrlf = true
+[user]
+	name = Zach Robert
+	email = 80664544+Abyiss-Zach@users.noreply.github.com
+	signingkey = ECB2685092E036F5
+[color]
+	ui = auto
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[grep]
+	extendRegexp = true
+	lineNumber = true
+[init]
+	defaultBranch = main
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+	lo = log --graph --oneline --decorate
+[commit]
+	gpgsign = true
+[gpg]
+	program = /usr/local/MacGPG2/bin/gpg2
+[tag]
+	forceSignAnnotated = true
