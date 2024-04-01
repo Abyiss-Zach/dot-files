@@ -5,8 +5,6 @@
 	safecrlf = true
 [user]
 	name = Zach Robert
-	email = 80664544+Abyiss-Zach@users.noreply.github.com
-	signingkey = ECB2685092E036F5
 [color]
 	ui = auto
 [filter "lfs"]
@@ -27,10 +25,29 @@
   hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
   type = cat-file -t
   dump = cat-file -p
-	lo = log --graph --oneline --decorate
+  lo = log --graph --oneline --decorate
 [commit]
 	gpgsign = true
 [gpg]
 	program = /usr/local/MacGPG2/bin/gpg2
 [tag]
 	forceSignAnnotated = true
+[pull]
+	ff = only
+[push]
+	autosetupremote = true
+[rebase]
+	autoStash = true
+[merge]
+	conflictStyle = zdiff3
+	verbose = true
+[diff]
+	algorithm = histogram
+[url "git@github.com:"]
+	insteadOf = "https://github.com/"
+[transfer]
+	fsckobjects = true
+[fetch]
+	fsckobjects = true
+[receive]
+	fsckObjects = true
